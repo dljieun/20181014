@@ -1,0 +1,109 @@
+
+<!doctype html>
+
+<html>
+<head></head>
+<title>LOVE</title>
+<style>
+      * {margin:0; padding:0;}
+
+    #ff {width: 70px; position: absolute; 
+				animation: ff 1s ease infinite; left:10%;}
+	#mm {width: 70px; position: absolute; 
+				animation: ff 1s ease infinite; left:15%;}
+	#fff {width: 80px; position: absolute; 
+				animation: ff 1s ease infinite; left:20%;}
+	#mmm {width: 100px; position: absolute; 
+				animation: ff 1s ease infinite; left:25%;}
+	
+	
+	
+				
+			@keyframes ff{
+				0% { margin-top: 50px; }
+				50% {margin-top:250px;}
+				100% {margin-top:50px;}
+			}
+
+         
+   body{background-color:pink;}
+   
+   #run {width:350px; height: 410px; position: absolute; top: 40%; left:70%; opacity: 0; }
+   #run2 {width:100%; position: absolute;}
+   
+
+
+   #image {position: absolute; width: 400px; opacity: 0; top: 35%; left:37%;}
+   #retro {position: absolute; width: 1200px;opacity: 0; top: 24%; left:11%;}
+     
+   #cd {position: absolute; top: 40%; width: 500px; height: 500px; left: 30%;}
+   #bounce {position:absolute; width:400px;  top:72%; left:14%; opacity:0;}
+   #ccc {width:450px; position: absolute; top: 20%; left:60%; opacity: 0; }
+   #bbb {width:250px; position: absolute; top: 75%; left: 60%; opacity: 0;}
+
+
+
+       
+
+         }
+   </style>
+
+<body>
+
+
+	<img id="run2" src="run.png">
+	<img id="retro" src="retro.png">
+
+    <img id="image" src="image.png">
+    <img id="ff" src="f.png">
+    <img id="mm" src="m.png">
+    <img id="fff" src="8.png">
+    <img id="mmm" src="4.png">
+	
+
+	<img id="bounce" src="bounce.gif">
+   
+   	<img id="cd" src="cd.png" onclick="a()">
+   	<img id="ccc" src="dog.gif">
+   	<img id="bbb" src="bbb.gif">
+	
+	<audio id="rin" src="rin.mp3"></audio>
+
+
+
+
+	<script type="text/javascript">
+
+
+         var i = 0;
+      function a(){
+         i += 1;
+         if(i%2==0){
+            cd.style.opacity=1;            
+            image.style.opacity=0;
+            bounce.style.opacity=0;
+            retro.style.opacity=0;
+            ccc.style.opacity=0;
+            bbb.style.opacity=0;
+
+            }
+
+            else if(i%2 == 1){
+            cd.style.opacity=0;
+            
+            image.style.opacity=1;
+            bounce.style.opacity=1;
+            retro.style.opacity=1;
+            ccc.style.opacity=1;
+            bbb.style.opacity=1;
+            
+           		rin.play();
+            
+               
+            }
+         
+         };
+        </script>
+
+</body>
+</html>
